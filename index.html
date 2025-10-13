@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume | Professional Profile</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#0d9488',
+                        },
+                        secondary: {
+                            500: '#64748b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .resume-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .floating-btn {
+            box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+        }
+        .floating-btn:hover {
+            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen font-sans antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center gap-8 mb-12">
+            <div class="relative group">
+                <img src="img\photo_2025-10-13_22-58-52.jpg" alt="Profile" class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg">
+                <div id="editPhotoBtn" class="hidden absolute inset-0 bg-black bg-opacity-50 rounded-full flex items-center justify-center cursor-pointer">
+                    <i data-feather="camera" class="text-white w-6 h-6"></i>
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-left">
+                <h1 id="name" class="text-3xl md:text-4xl font-bold text-slate-800 mb-2">Aleksey Verzhinskiy-Ryng</h1>
+                <p id="title" class="text-lg text-secondary-500 mb-4">Senior Automation QA Engineer (Python) 5+ yrs</p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                    <a id="email" href="mailto:john.doe@example.com" class="flex items-center text-slate-600 hover:text-primary-500 transition-colors">
+                        <i data-feather="mail" class="mr-2 w-4 h-4"></i> a.verzhins@gmail.com
+                    </a>
+                    <a id="telegram" href="https://t.me/averzhry" class="flex items-center text-slate-600 hover:text-primary-500 transition-colors">
+                        <i data-feather="send" class="mr-2 w-4 h-4"></i> @averzhry
+                    </a>
+                    <a id="linkedin" href="https://www.linkedin.com/in/aleksey-verzhinskiy-ryng-31b4a594/" class="flex items-center text-slate-600 hover:text-primary-500 transition-colors">
+                        <i data-feather="linkedin" class="mr-2 w-4 h-4"></i> My linkedin
+                    </a>
+                    <p id="location" class="flex items-center text-slate-600">
+                        <i data-feather="map-pin" class="mr-2 w-4 h-4"></i> Minsk, Republic of Belarus \ Remote
+                    </p>
+                </div>
+            </div>
+            <div class="mt-4 md:mt-0">
+                <a href="static/Aleksey_Verzhinskiy-Ryng_CV.pdf" download class="bg-secondary-500 hover:bg-primary-500 text-white px-6 py-2 rounded-lg transition-colors flex items-center">
+                    <i data-feather="download" class="mr-2"></i> Download CV
+                </a>
+  </div>
+</header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Left Column -->
+            <div class="md:col-span-3 space-y-8">
+                <!-- About Section -->
+                <section class="resume-card bg-white p-6 rounded-xl shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-slate-800 flex items-center">
+                            <i data-feather="user" class="mr-2 text-primary-500"></i> About Me
+                        </h2>
+                    </div>
+                    <p id="aboutText" class="text-slate-600 leading-relaxed">
+                      QA Automation Engineer with strong focus on mobile UI testing and CI/CD.
+                      Built and maintained test frameworks, integrated reporting, and led automation initiatives across Android and iOS projects.
+                    </p>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="resume-card bg-white p-6 rounded-xl shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-slate-800 flex items-center">
+                            <i data-feather="briefcase" class="mr-2 text-primary-500"></i> Experience
+                        </h2>
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Experience Item -->
+                        <div class="relative group">
+                            <div class="flex flex-col sm:flex-row">
+                                <div class="sm:w-1/5 mb-2 sm:mb-0">
+                                    <p class="text-secondary-500">Mar 2021 - Present</p>
+                                </div>
+                                <div class="sm:w-4/5">
+                                    <h3 id="jobTitle1" class="font-medium text-slate-800">Automation QA Engineer</h3>
+                                    <p id="company1" class="text-secondary-500 mb-2">Moonactive (Melsoft), Project: Family Island, Remote</p>
+                                    <p id="jobDesc1" class="text-slate-600">
+                                        Responsibilities:</p>
+                                        <ul class="list-disc list-inside text-slate-600 space-y-1">
+                                            <li>Implementation and support of automated testing in Python for mobile apps</li>
+                                            <li>Provide testing results in Test Manager Systems (Testrail, Testomat)</li>
+                                            <li>Organize and support auto launches</li>
+                                            <li>Create different Test Strategies: Regression, Upgrade, l10n, Content, etc</li>
+                                            <li>Implementation and support of CI/CD processes</li>
+                                            <li>Conduct code reviews</li>
+                                        </ul>
+                                    <p></p>
+                                        <p id="jobDesc1_2" class="text-slate-600"> Challenges:</p>
+                                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                                        <li>Migrate users testing</li>
+                                        <li>DeepCopy very strong depends game configs</li>
+                                        <li>Participation in the development of new functionalities (Shift left testing)</li>
+                                        <li>Export / import Test artifacts from one Test Manager System on another one</li>
+                                        </ul>
+                                        <p id="jobDesc1_3" class="text-slate-600">
+                                            Tech Stack:</p>
+                                        <p id="jobDesc1_4" class="text-slate-600">Python 3, pytest, pydantic, Airtest, Poco, google (google, drive, sheets, google cloud), requests, Git, Github
+                                        Actions, TestRail API, JIRA API, ReportPortal (Allure)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience Item -->
+                        <div class="relative group">
+                            <div class="flex flex-col sm:flex-row">
+                                <div class="sm:w-1/5 mb-2 sm:mb-0">
+                                    <p class="text-secondary-500">Aug 2019 - Feb 2021</p>
+                                </div>
+                                <div class="sm:w-4/5">
+                                    <h3 id="jobTitle2" class="font-medium text-slate-800">Senior Manual QA</h3>
+                                    <p id="company2" class="text-secondary-500 mb-2">Melsoft, Minsk, Republic of Belarus</p>
+                                    <p id="jobDesc2" class="text-slate-600">
+                                            Responsibilities:</p>
+                                            <ul class="list-disc list-inside text-slate-600 space-y-1">
+                                                <li>Conduct cross-platform manual testing: Android, iOS</li>
+                                                <li>Perform API testing</li>
+                                                <li>Write and work with test documentation</li>
+                                                <li>Manage defects, bugs, etc.</li>
+                                            </ul>
+                                    <p id="jobDesc2_2" class="text-slate-600">Tech Stack:</p>
+                                    <p id="jobDesc2_3" class="text-slate-600">Defold, CI/CD, Postman, Charles, Testrail, JSON, JIRA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experience Item -->
+                        <div class="relative group">
+                            <div class="flex flex-col sm:flex-row">
+                                <div class="sm:w-1/5 mb-2 sm:mb-0">
+                                    <p class="text-secondary-500">Aug 2019 - Feb 2021</p>
+                                </div>
+                                <div class="sm:w-4/5">
+                                    <h3 id="jobTitle3" class="font-medium text-slate-800">Specialist software testing</h3>
+                                    <p id="company3" class="text-secondary-500 mb-2">Unitary enterprise velcom (TAG), Minsk, Republic of Belarus</p>
+                                    <p id="jobDesc3" class="text-slate-600">
+                                        Responsibilities:</p>
+                                     <p id="jobDesc3_1" class="text-slate-600">Testing billing systems, tariff plans, and service provision.
+                                        I also test USSD requests, voice assistants, streaming video,
+                                        mobile business apps, smartwatch apps, location tracking apps,
+                                        credit checks, and much more.</p>
+                                        <ul class="list-disc list-inside text-slate-600 space-y-1">
+                                            <li>Conduct manual testing mobile platforms: Android, iOS, Windows Phone 8</li>
+                                            <li>Conduct manual testing TV's platforms: Tizen, WebOS, AndroidTV</li>
+                                            <li>Conduct manual testing desktop platforms: MacOS, Linux, Windows, Web</li>
+                                            <li>Write and work with test documentation</li>
+                                            <li>Manage defects, bugs, etc.</li>
+                                        </ul>
+                                    <p id="jobDesc3_2" class="text-slate-600">Tech Stack:</p>
+                                    <p id="jobDesc3_3" class="text-slate-600">Hybris, SoapUI, Postman, Charles, JIRA, Trello</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="resume-card bg-white p-6 rounded-xl shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-slate-800 flex items-center">
+                            <i data-feather="book" class="mr-2 text-primary-500"></i> Education
+                        </h2>
+                    </div>
+                    <div class="space-y-6">
+                        <!-- Education Item -->
+                        <div class="relative group">
+                            <div class="flex flex-col sm:flex-row">
+                                <div class="sm:w-1/4 mb-2 sm:mb-0">
+                                    <p class="text-secondary-500">Sep 2020</p>
+                                </div>
+                                <div class="sm:w-3/4">
+                                    <h3 id="degree_1" class="font-medium text-slate-800">Python Programming for Testers (Automation testing)</h3>
+                                     <!-- <p id="university_1" class="text-secondary-500 mb-2">software-testing.ru</p>-->
+                                    <!-- https://cert.software-testing.ru/276797123274473991 -->
+                                    <a id="software_testing" href="https://cert.software-testing.ru/276797123274473991" class="flex items-center text-slate-600 hover:text-primary-500 transition-colors">
+                                        <i data-feather="external-link" class="w-4 h-4"></i> software-testing.ru
+                                    </a>
+                                    <p id="educationDesc_1" class="text-slate-600">
+                                        This course focuses on exploring the capabilities of the Python language
+                                        and supporting libraries that enable the development of automated tests for
+                                        various types of applications, as well as design patterns that allow for
+                                        convenient organization and easy modification of code.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Education Item -->
+                        <div class="relative group">
+                            <div class="flex flex-col sm:flex-row">
+                                <div class="sm:w-1/4 mb-2 sm:mb-0">
+                                    <p class="text-secondary-500">2015 - 2020</p>
+                                </div>
+                                <div class="sm:w-3/4">
+                                    <h3 id="degree" class="font-medium text-slate-800">Bachelor of Information Resource Management</h3>
+                                    <p id="university" class="text-secondary-500 mb-2">School of Business BSU, Minsk, Republic of Belarus</p>
+                                    <p id="educationDesc" class="text-slate-600">
+                                        Specializes in applied software development and information technology management.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <!-- Skills Section -->
+                <section class="resume-card bg-white p-6 rounded-xl shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-slate-800 flex items-center">
+                            <i data-feather="code" class="mr-2 text-primary-500"></i> Skills
+                        </h2>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill1" class="text-slate-700">Python 3</span>
+                            </div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill2" class="text-slate-700">Pytest</span>
+                            </div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill7" class="text-slate-700">POCO / Airtest</span>
+                            </div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill3" class="text-slate-700">Defold</span>
+                            </div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill4" class="text-slate-700">REST API</span>
+                            </div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill5" class="text-slate-700">VCS Git</span>
+                            </div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between mb-1">
+                                <span id="skill6" class="text-slate-700">GitHub Actions</span>
+                            </div>
+                        </div>
+                    </div>
+  </section>
+
+                <!-- Languages Section -->
+                <section class="resume-card bg-white p-6 rounded-xl shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-slate-800 flex items-center">
+                            <i data-feather="globe" class="mr-2 text-primary-500"></i> Languages
+                        </h2>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Language Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between">
+                                <span id="lang1" class="text-slate-700">Russian</span>
+                                <span id="lang1Level" class="text-secondary-500">Native</span>
+                            </div>
+                        </div>
+                        <!-- Language Item -->
+                        <div class="relative group">
+                            <div class="flex justify-between">
+                                <span id="lang2" class="text-slate-700">English</span>
+                                <span id="lang2Level" class="text-secondary-500">Professional</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="resume-card bg-white p-6 rounded-xl shadow-sm transition-all duration-300">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-slate-800 flex items-center">
+                            <i data-feather="github" class="mr-2 text-primary-500"></i> Projects
+                        </h2>
+                    </div>
+                    <div class="space-y-4">
+                        <!-- Project Item -->
+                        <div class="relative group">
+                            <h3 id="project1" class="font-medium text-slate-800 mb-1">Family Island</h3>
+                            <p id="company1_1" class="text-secondary-500 mb-2">Owner: Moonactive</p>
+                            <p id="project1Desc" class="text-slate-600 text-sm">This is my current working project.</p>
+                            <p id="project2Desc" class="text-slate-600 text-sm">Farm, harvest, cook and build.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Download CV button
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // In a real implementation, this would generate a PDF version of the resume
+            alert('CV download functionality would be implemented here. Typically this would generate a PDF version of your resume.');
+        });
+    </script>
+</body>
+</html>
